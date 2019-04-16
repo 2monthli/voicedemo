@@ -20,14 +20,14 @@ public class Player {
 	 */
 	public static void main(String[] args)  {
 		// TODO Auto-generated method stub
-		//File f = new File("D:/lpfile/test/项目/ws/voice/resources/1.wav");
+		//File f = new File("D:/lpfile/test/脧卯脛驴/ws/voice/resources/1.wav");
 		File f = new File(System.getProperty("java.class.path")+"/1.wav");
 		try {
 			AudioInputStream ais=AudioSystem.getAudioInputStream(f);
 			AudioFormat af = ais.getFormat();
 			System.out.println(af.getSampleRate());
 			System.out.println(ais.getFrameLength());
-			System.out.println("时长：（秒）"+ais.getFrameLength()/af.getSampleRate());
+			System.out.println("鏃堕暱锛氾紙绉掞級"+ais.getFrameLength()/af.getSampleRate());
 			DataLine.Info di=new DataLine.Info(SourceDataLine.class,af);
 			SourceDataLine sdl=(SourceDataLine) AudioSystem.getLine(di);
 			byte[] b = new byte[1024];
